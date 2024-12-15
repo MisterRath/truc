@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eleonore <3</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="giftText">OUVRE LE CADEAU</h1>
+    <img id="giftButton" src="button.png" onclick="revealGift()" alt="Ouvrir le cadeau">
+    <h1 id="giftTitle" class="hidden">Joyeux anniversaire Eleonore 💋😉😳 !</h1>
+    <h2 id="giftCute" class="hidden">Je sais que tu aimes ça <b>mademoiselle</b> ! fais-toi plaisir !</h2>
+    <img id="giftImage" src="blague.png" alt="Cadeau" style="width: 100%; height: 100%;" class="hidden">
+    <audio id="giftAudio" src="out.mp3" class="hidden"></audio>
+    <script>
+        function revealGift() {
+            var button = document.getElementById("giftButton");
+            var old_text = document.getElementById("giftText");
+            var title = document.getElementById("giftTitle");
+            var image = document.getElementById("giftImage");
+            var audio = document.getElementById("giftAudio");
+            var cute = document.getElementById("giftCute");
+
+            button.style.display = "none";
+            old_text.style.display = "none";
+            setTimeout(function() {
+                title.classList.remove("hidden");
+                image.classList.remove("hidden");
+                cute.classList.remove("hidden");
+            }, 10);
+            audio.classList.remove("hidden");
+            audio.play();
+        }
+    </script>
+</body>
+</html>
